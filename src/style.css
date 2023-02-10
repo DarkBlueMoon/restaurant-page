@@ -12,7 +12,6 @@
 }
 
 body {
-  /* background-color: rgb(75, 75, 75); */
   background: var(--rich-black);
   color: white;
 }
@@ -78,13 +77,13 @@ body {
 
 .restaurant-blurb {
   text-align: center;
-  width: 75%;
-  height: min-content;
-  display: block;
+  width: 80%;
+  /* height: min-content; */
+  /* display: block; */
   margin: 20px auto;
   font-size: 1.25rem;
   line-height: 2;
-  background-color: rgba(100, 100, 100, 0.8);
+  /* background-color: rgba(100, 100, 100, 0.8); */
 }
 
 .credit {
