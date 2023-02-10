@@ -11,7 +11,7 @@ body {
 
 #content {
   margin: 0 auto;
-  width: 75%;
+  width: 80%;
   height: 100vh;
   background: url("really-rad-ramen-background.jpg") no-repeat center/cover;
   display: grid;
@@ -29,16 +29,27 @@ body {
   margin-bottom: 20px;
 }
 
-.navigation ul {
-  display: flex;
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+  gap: 40px;
   justify-content: space-around;
-  list-style-type: none;
 }
 
-.navigation ul li a {
-  text-decoration: none;
+.btn {
+  padding: 10px 0;
+  background: black;
   color: white;
+  border: 1px solid transparent;
+  border-radius: 5px;
   font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
 }
 
 .main {
@@ -55,10 +66,12 @@ body {
 .restaurant-blurb {
   text-align: center;
   width: 75%;
+  height: min-content;
   display: block;
   margin: 20px auto;
   font-size: 1.25rem;
   line-height: 2;
+  background-color: rgba(100, 100, 100, 0.8);
 }
 
 .credit {
