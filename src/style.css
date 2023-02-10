@@ -1,3 +1,10 @@
+:root {
+  --mikado-yellow: #ffc300;
+  --rich-black: #000814;
+  --gold: #ffd60a;
+  --yale-blue: #003566;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +12,8 @@
 }
 
 body {
-  background-color: rgb(75, 75, 75);
+  /* background-color: rgb(75, 75, 75); */
+  background: var(--rich-black);
   color: white;
 }
 
@@ -13,20 +21,24 @@ body {
   margin: 0 auto;
   width: 80%;
   height: 100vh;
-  background: url("really-rad-ramen-background.jpg") no-repeat center/cover;
+  /* background: url("really-rad-ramen-background.jpg") no-repeat center/cover; */
   display: grid;
   grid-template-rows: auto 1fr auto;
   position: relative;
+  border: 2px dotted white;
+  background: var(--yale-blue);
 }
 
-.header {
+/* .header {
   background-color: rgba(119, 119, 119, 0.7);
-}
+} */
 
 .restaurant-title {
+  color: var(--mikado-yellow);
   text-align: center;
   font-size: 3rem;
   margin-bottom: 20px;
+  border-bottom: 1px solid var(--mikado-yellow);
 }
 
 .navigation {
@@ -41,15 +53,16 @@ body {
   padding: 10px 0;
   background: black;
   color: white;
-  border: 1px solid transparent;
+  border: 2px solid var(--mikado-yellow);
   border-radius: 5px;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
 .btn:hover {
-  background: white;
-  color: black;
+  background: #ffd60a;
+  color: #000814;
+  border: 2px solid #000814;
 }
 
 .main {
