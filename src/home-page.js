@@ -1,10 +1,10 @@
 import Ramen from "./img/ramen.jpg";
 
-import { createHeader, createImage, createFooter } from "./utility";
+import { createImage } from "./utility";
 
-function createMainContent() {
-  const main = document.createElement("main");
-  main.classList.add("main");
+function createHomePage() {
+  const home = document.createElement("div");
+  home.classList.add("home");
 
   const topDesc = document.createElement("p");
   topDesc.textContent =
@@ -14,18 +14,18 @@ function createMainContent() {
 
   const img = createImage(Ramen, "An illustration of a bowl of ramen");
 
-  main.appendChild(topDesc);
-  main.appendChild(img);
-  main.appendChild(botDesc);
+  home.appendChild(topDesc);
+  home.appendChild(img);
+  home.appendChild(botDesc);
 
-  return main;
+  return home;
 }
 
+// TODO: Add an active flag so that the currently loaded page doesn't get loaded again.
 function loadHomePage() {
-  const contentDiv = document.getElementById("content");
-  contentDiv.appendChild(createHeader());
-  contentDiv.appendChild(createMainContent());
-  contentDiv.appendChild(createFooter());
+  const mainDiv = document.querySelector(".main");
+  mainDiv.textContent = "";
+  mainDiv.appendChild(createHomePage());
 }
 
 export default loadHomePage;

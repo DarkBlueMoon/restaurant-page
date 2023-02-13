@@ -57,3 +57,9 @@ export function createFooter() {
 
   return footer;
 }
+
+export function createMain() {
+  const main = document.createElement("main");
+  main.classList.add("main");
+  return main;
+}
