@@ -1,96 +1,103 @@
-:root {
-  --mikado-yellow: #ffc300;
-  --rich-black: #000814;
-  --gold: #ffd60a;
-  --yale-blue: #003566;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --gold: #ffd60a;
+  --rich-black: #000814;
+  --transparent-black-background: rgba(0, 0, 0, 0.5);
+}
+
 body {
-  background: var(--rich-black);
-  color: white;
+  background: url("img/background.jpg") center/cover;
+  font-family: "Montserrat", sans-serif;
 }
 
 #content {
   margin: 0 auto;
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   height: 100vh;
-  /* background: url("really-rad-ramen-background.jpg") no-repeat center/cover; */
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  position: relative;
-  border: 2px dotted white;
-  background: var(--yale-blue);
 }
 
-/* .header {
-  background-color: rgba(119, 119, 119, 0.7);
-} */
+/* ---------------- HEADER STYLING ---------------- */
 
-.restaurant-title {
-  color: var(--mikado-yellow);
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--mikado-yellow);
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: var(--transparent-black-background);
+  padding: 2rem 0;
+}
+
+.restaurant-name {
+  color: var(--gold);
+  font-size: 4rem;
+  margin-bottom: 1rem;
 }
 
 .navigation {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
-  gap: 40px;
-  justify-content: space-around;
+  display: flex;
+  column-gap: 2rem;
 }
 
 .btn {
-  padding: 10px 0;
+  padding: 0.75rem;
   background: black;
   color: white;
-  border: 2px solid var(--mikado-yellow);
+  border: 1px solid var(--gold);
   border-radius: 5px;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
 .btn:hover {
-  background: #ffd60a;
-  color: #000814;
-  border: 2px solid #000814;
+  background: var(--gold);
+  color: var(--rich-black);
+  border: 1px solid var(--rich-black);
 }
+
+/* ---------------- MAIN STYLING ---------------- */
 
 .main {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  place-self: center;
+  padding: 2rem;
+  background-color: var(--transparent-black-background);
+  border: 1px solid var(--gold);
 }
 
-.restaurant-img {
-  display: block;
-  margin: 20px auto;
+.main img {
+  width: 800px;
+  padding: 2rem;
 }
 
-.restaurant-blurb {
-  text-align: center;
-  width: 80%;
-  /* height: min-content; */
-  /* display: block; */
-  margin: 20px auto;
-  font-size: 1.25rem;
-  line-height: 2;
-  /* background-color: rgba(100, 100, 100, 0.8); */
-}
-
-.credit {
-  align-self: end;
-  text-align: center;
-}
-
-.credit a {
+.main p {
   color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* ---------------- FOOTER STYLING ---------------- */
+
+.credit-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--transparent-black-background);
+  padding: 1rem;
+  color: white;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+.credit-container a {
+  color: white;
+  text-decoration: none;
+}
+
+.credit-container a:hover {
+  color: var(--gold);
 }

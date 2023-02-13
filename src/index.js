@@ -1,24 +1,23 @@
-import { loadHomePage } from "./home-page";
-import { loadMenuPage } from "./menu-page";
-import { loadHeader } from "./load-header";
+import loadHomePage from "./home-page";
+// import { loadMenuPage } from "./menu-page";
 import "./style.css";
 
-loadHeader();
+// loadMenuPage();
 loadHomePage();
 
-const homeBtn = document.querySelector(".home");
-homeBtn.addEventListener("click", () => {
-  document.querySelector(".main").remove();
-  loadHomePage();
-});
+// const homeBtn = document.querySelector(".home");
+// homeBtn.addEventListener("click", () => {
+//   document.querySelector(".main").remove();
+//   loadHomePage();
+// });
 
-const menuBtn = document.querySelector(".menu");
-menuBtn.addEventListener("click", () => {
-  document.querySelector(".main").remove();
-  loadMenuPage();
-});
+// const menuBtn = document.querySelector(".menu");
+// menuBtn.addEventListener("click", () => {
+//   document.querySelector(".main").remove();
+//   loadMenuPage();
+// });
 
-const contactBtn = document.querySelector(".contact");
-contactBtn.addEventListener("click", () => {
-  console.log("asdf");
-});
+// const contactBtn = document.querySelector(".contact");
+// contactBtn.addEventListener("click", () => {
+//   console.log("asdf");
+// });

@@ -1,25 +1,31 @@
-import Ramen from "./img/kuro-ramen.jpg";
-import {
-  createImageElement,
-  createPageElement,
-  appendElement,
-} from "./utility";
+import Ramen from "./img/ramen.jpg";
 
-export const loadHomePage = () => {
-  const mainContent = createPageElement("main", null, "main");
-  appendElement(document.getElementById("content"), mainContent);
+import { createHeader, createImage, createFooter } from "./utility";
 
-  appendElement(
-    mainContent,
-    createImageElement(
-      Ramen,
-      "Our signature tonkotsu(pork bone) broth ramen with secret house made black garlic oil. Toppings include chashu, egg, menma, corn, narutomaki, and green onions.",
-      "restaurant-img"
-    ),
-    createPageElement(
-      "p",
-      "Experience our welcoming atmosphere and catchy tunes as you enjoy one of our handcrafted ramen or rice dishes, complete with a refreshing tea, soda, or latte drink. Of course, we have many appetizers you can partake in as well.",
-      "restaurant-blurb"
-    )
-  );
-};
+function createMainContent() {
+  const main = document.createElement("main");
+  main.classList.add("main");
+
+  const topDesc = document.createElement("p");
+  topDesc.textContent =
+    "Come warm your body and soul with a delicious bowl of ramen!";
+  const botDesc = document.createElement("p");
+  botDesc.textContent = "While you're at it, enjoy one of our appetizers!";
+
+  const img = createImage(Ramen, "An illustration of a bowl of ramen");
+
+  main.appendChild(topDesc);
+  main.appendChild(img);
+  main.appendChild(botDesc);
+
+  return main;
+}
+
+function loadHomePage() {
+  const contentDiv = document.getElementById("content");
+  contentDiv.appendChild(createHeader());
+  contentDiv.appendChild(createMainContent());
+  contentDiv.appendChild(createFooter());
+}
+
+export default loadHomePage;
