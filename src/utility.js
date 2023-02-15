@@ -63,3 +63,30 @@ export function createMain() {
   main.classList.add("main");
   return main;
 }
+
+export function createMenuItem(name, desc, imgName, price) {
+  const item = document.createElement("div");
+  item.classList.add("item");
+
+  const details = document.createElement("div");
+  details.classList.add("item-details");
+
+  const itemName = document.createElement("p");
+  itemName.classList.add("name");
+  itemName.textContent = name;
+  const itemDesc = document.createElement("p");
+  itemDesc.classList.add("desc");
+  itemDesc.textContent = desc;
+
+  details.append(itemName, itemDesc);
+
+  const img = createImage(imgName);
+
+  const itemPrice = document.createElement("span");
+  itemPrice.classList.add("item-price");
+  itemPrice.textContent = `$${price}`;
+
+  item.append(details, img, itemPrice);
+
+  return item;
+}

@@ -1,6 +1,6 @@
 import loadHomePage from "./home-page";
+import loadMenuPage from "./menu-page";
 import { createHeader, createFooter, createMain } from "./utility";
-// import { loadMenuPage } from "./menu-page";
 import "./style.css";
 
 // loadMenuPage();
@@ -9,21 +9,20 @@ function initializePage() {
   contentDiv.appendChild(createHeader());
   contentDiv.appendChild(createMain());
   contentDiv.appendChild(createFooter());
-  loadHomePage();
+  // loadHomePage();
+  loadMenuPage();
 }
 initializePage();
 
 const homeBtn = document.querySelector(".home");
 homeBtn.addEventListener("click", () => {
-  // document.querySelector(".main").remove();
   loadHomePage();
 });
 
-// const menuBtn = document.querySelector(".menu");
-// menuBtn.addEventListener("click", () => {
-//   document.querySelector(".main").remove();
-//   loadMenuPage();
-// });
+const menuBtn = document.querySelector(".menu");
+menuBtn.addEventListener("click", () => {
+  loadMenuPage();
+});
 
 // const contactBtn = document.querySelector(".contact");
 // contactBtn.addEventListener("click", () => {

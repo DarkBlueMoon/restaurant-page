@@ -1,10 +1,9 @@
-import Ramen from "./img/ramen.jpg";
-
+import { Ramen } from "./img/imgIndex";
 import { createImage } from "./utility";
 
 function createHomePage() {
   const home = document.createElement("div");
-  home.classList.add("home");
+  home.classList.add("home-container");
 
   const topDesc = document.createElement("p");
   topDesc.textContent =

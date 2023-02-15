@@ -11,6 +11,8 @@
   },
   "rules": {
     "quotes": ["error", "double"],
-    "operator-linebreak": "off"
+    "operator-linebreak": "off",
+    "comma-dangle": "off",
+    "no-restricted-syntax": "off"
   }
 }
