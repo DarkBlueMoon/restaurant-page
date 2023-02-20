@@ -20,7 +20,7 @@
 }
 
 body {
-  background: url("img/background.jpg") center/cover;
+  background: url("img/background.jpg") center;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -141,6 +141,7 @@ body {
 
 .item img {
   width: 200px;
+  height: 100%;
   padding: 0;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -149,12 +150,17 @@ body {
 .item-details {
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 1rem;
   padding: 1rem;
 }
 
-.item-details p {
+.item-details .name {
   font-size: 1.25rem;
+}
+
+.item-details .desc {
+  font-size: 1.1rem;
 }
 
 .item .name {

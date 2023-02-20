@@ -4,6 +4,7 @@ import CurryBeefUdon from "./curry-beef-udon.jpg";
 import GyuDon from "./gyu-don.jpg";
 import IcedOolongTea from "./iced-oolong-tea.jpg";
 import KatsuDon from "./katsu-don.jpg";
+import KuroRamen from "./kuro-ramen.jpg";
 import MatchaLatte from "./matcha-latte.jpg";
 import PassionfruitSoda from "./passionfruit-soda.jpg";
 import RainbowRoll from "./rainbow-roll.jpg";
@@ -15,10 +16,10 @@ import VegetarianShoyuRamen from "./vegetarian-shoyu-ramen.jpg";
 export {
   Ramen,
   CaliforniaRoll,
-  CurryBeefUdon,
   GyuDon,
   IcedOolongTea,
   KatsuDon,
+  KuroRamen,
   MatchaLatte,
   PassionfruitSoda,
   RainbowRoll,
