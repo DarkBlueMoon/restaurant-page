@@ -1,6 +1,5 @@
 import Ramen from "./ramen.jpg";
 import CaliforniaRoll from "./california-roll.jpg";
-import CurryBeefUdon from "./curry-beef-udon.jpg";
 import GyuDon from "./gyu-don.jpg";
 import IcedOolongTea from "./iced-oolong-tea.jpg";
 import KatsuDon from "./katsu-don.jpg";

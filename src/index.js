@@ -1,5 +1,6 @@
 import loadHomePage from "./home-page";
 import loadMenuPage from "./menu-page";
+import loadContactPage from "./contact-page";
 import { createHeader, createFooter, createMain } from "./utility";
 import "./style.css";
 
@@ -9,8 +10,8 @@ function initializePage() {
   contentDiv.appendChild(createHeader());
   contentDiv.appendChild(createMain());
   contentDiv.appendChild(createFooter());
-  // loadHomePage();
-  loadMenuPage();
+  loadHomePage();
+  // loadMenuPage();
 }
 initializePage();
 
@@ -24,7 +25,7 @@ menuBtn.addEventListener("click", () => {
   loadMenuPage();
 });
 
-// const contactBtn = document.querySelector(".contact");
-// contactBtn.addEventListener("click", () => {
-//   console.log("asdf");
-// });
+const contactBtn = document.querySelector(".contact");
+contactBtn.addEventListener("click", () => {
+  loadContactPage();
+});

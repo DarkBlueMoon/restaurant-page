@@ -180,3 +180,8 @@ body {
   padding: 8px;
   border-radius: 10px;
 }
+
+/* ---------------- CONTACT STYLING ---------------- */
+.contact-container {
+  line-height: 3;
+}
